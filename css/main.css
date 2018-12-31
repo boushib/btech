@@ -64,6 +64,23 @@ section {
     position: relative;
 }
 
+.card-body span {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    font-weight: 600;
+}
+
+.card-body span.meetup {
+    color: #52c4c4
+}
+.card-body span.class {
+    color: #91c84d
+}
+.card-body span.event {
+    color: #333
+}
+
 .card-body button {
     height: 36px;
     width: 84px;
