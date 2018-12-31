@@ -163,6 +163,17 @@ header h1 span {
     position: relative;
 }
 
+header form select {
+    background: #fff;
+    color: #888;
+    width: 29%;
+    padding: 0 20px;
+    height: 52px;
+    border: none;
+    border-left: 1px solid #eee;
+    outline: none;
+}
+
 .container {
     padding: 20px 80px;
 }
@@ -220,8 +231,8 @@ header h1 span {
 }
 
 .hero .search-box {
-    font-family: "FontAwesome";
-    width: 85%;
+    /* font-family: "FontAwesome"; */
+    width: 55%;
     float: left;
     position: relative
 }
@@ -234,7 +245,7 @@ header h1 span {
     outline: none;
 }
 
-.hero .search-box:after {
+/* .hero .search-box:after {
     content: '\f078';
     height: 52px;
     line-height: 52px;
@@ -244,7 +255,7 @@ header h1 span {
     right: 20px;
     color: #777;
     font-size: 14px;
-}
+} */
 
 button {
     background-color: #92c655;
@@ -407,6 +418,7 @@ nav li:focus a {
     color: #aaa;
     transition: all .3s ease-in-out
 }
+
 .about-us button:nth-of-type(3):hover {
     background: #ccc;
     color: #fff
@@ -661,6 +673,25 @@ aside h2 span {
     header {
         height: 120vh;
     }
+
+    .hero form {
+        width: 100%;
+    }
+
+    .hero .search-box {
+        width: 100%;
+        float: none;
+        margin-bottom: 16px;
+    }
+
+    header form select {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .hero button {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -689,20 +720,6 @@ aside h2 span {
 
     .hero .container {
         padding: 40px 60px;
-    }
-
-    .hero form {
-        width: 100%;
-    }
-
-    .hero .search-box {
-        width: 100%;
-        float: none;
-        margin-bottom: 16px;
-    }
-
-    .hero button {
-        width: 100%;
     }
 
     upcoming-events .card {
