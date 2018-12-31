@@ -277,6 +277,21 @@ nav {
     z-index: 999;
 }
 
+nav .nav-toggler {
+    cursor: pointer;
+    position: absolute;
+    right: 112px;
+    display: none;
+}
+
+nav .nav-toggler span {
+    display: block;
+    height: 2px;
+    width: 20px;
+    background-color: #92c655;
+    margin: 4px;
+}
+
 nav .col {
     padding: 20px 0;
 }
@@ -302,11 +317,19 @@ nav .col {
     width: 15%;
 }
 
+.fab {
+    transition: all .3s ease-in-out;
+}
+
 header .fab {
     color: #ccc;
     font-size: 17px;
     margin: 0 5px;
     cursor: pointer;
+}
+
+.fab:hover {
+    color: #91c84d;
 }
 
 header .login {
@@ -357,24 +380,38 @@ nav li:focus a {
 }
 
 .about-us button:nth-of-type(1) {
-    /* background: #52c4c4; */
     border: 2px solid #52c4c4;
     background: transparent;
     color: #52c4c4;
+    transition: all .3s ease-in-out
+}
+
+.about-us button:nth-of-type(1):hover {
+    background: #52c4c4;
+    color: #fff;
 }
 
 .about-us button:nth-of-type(2) {
-    /* background: #92c655; */
     border: 2px solid #92c655;
     background: transparent;
     color: #92c655;
+    transition: all .3s ease-in-out
+}
+
+.about-us button:nth-of-type(2):hover {
+    background: #92c655;
+    color: #fff;
 }
 
 .about-us button:nth-of-type(3) {
-    /* background: #ccc; */
     border: 2px solid #ccc;
     background: transparent;
     color: #aaa;
+    transition: all .3s ease-in-out
+}
+.about-us button:nth-of-type(3):hover {
+    background: #ccc;
+    color: #fff
 }
 
 .about-us .subtitle {
@@ -432,9 +469,11 @@ nav li:focus a {
 .upcoming-events .filter-key.filter-key-meetup::before {
     background-color: #52c4c4;
 }
+
 .upcoming-events .filter-key.filter-key-class::before {
     background-color: #91c84d;
 }
+
 .upcoming-events .filter-key.filter-key-event::before {
     background-color: #333;
 }
@@ -474,7 +513,7 @@ footer h4:after {
     left: 0;
     bottom: 0;
     border: 1px solid #91c84d;
-    width: 36px;
+    width: 24px;
 }
 
 footer .copy {
@@ -571,3 +610,103 @@ aside h2 span {
 }
 
 /* end aside */
+
+/* media queries */
+
+@media (max-width: 960px) {
+
+    nav .nav-toggler {
+        display: block;
+    }
+
+    .col-4 {
+        width: 50%;
+    }
+
+    .col-6 {
+        width: 100%;
+    }
+
+    nav .menu {
+        display: none;
+        position: fixed;
+        height: fit-content;
+        width: 100%;
+        background: #1a1a1a;
+        left: 0;
+        padding: 20px;
+        border-top: 1px solid #272727;
+    }
+
+    nav li {
+        display: block;
+    }
+
+    footer .social {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .col-4,
+    .col-5,
+    .col-7,
+    .col-8 {
+        width: 100%;
+    }
+
+    .col-2 {
+        width: 33.3333%;
+    }
+
+    header {
+        height: 120vh;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header h1,
+    header h1 span {
+        font-size: 26px;
+    }
+
+    .container {
+        padding: 20px 36px;
+    }
+
+    section {
+        padding: 36px 0;
+    }
+
+    header {
+        height: 116vh;
+    }
+
+    .hero .container {
+        padding: 40px 60px;
+    }
+
+    .hero form {
+        width: 100%;
+    }
+
+    .hero .search-box {
+        width: 100%;
+        float: none;
+        margin-bottom: 16px;
+    }
+
+    .hero button {
+        width: 100%;
+    }
+
+    upcoming-events .card {
+        margin: 32px 0 0 0;
+    }
+
+    footer .container {
+        padding: 20px 40px;
+    }
+}

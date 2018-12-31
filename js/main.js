@@ -13,3 +13,10 @@ $('#toggle-events').on('click', function(){
     $('#toggle-events').animate({marginLeft: toggle}, 500);
     $('.overlap').animate({opacity: overlapOpacity}, 400);
 });
+
+navHeight = $('nav').height();
+$('#menu').css('top', navHeight);
+
+$('#nav-toggler').on('click', function(){
+    $('#menu').slideToggle();
+});
