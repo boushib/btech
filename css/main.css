@@ -255,9 +255,7 @@ button {
 }
 
 header {
-    /* height: 100vh; */
-    height: 150vh;
-    /* background: #e1e1e1 url(../img/img-1.png) center; */
+    height: 160vh;
     background: #e1e1e1;
     background-size: cover;
     position: relative;
@@ -302,7 +300,7 @@ nav .col {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #e1e1e1 url(../img/img-1.png) center;
+    background: #e1e1e1 url(../img/img-1.jpg) center;
     background-size: cover;
     position: relative;
 }
@@ -438,7 +436,7 @@ nav li:focus a {
 /* end upcoming events */
 
 .upcoming-events {
-    background: #e1e1e1 url(../img/img-1.png);
+    background: #e1e1e1 url(../img/img-1.jpg);
     background-size: cover;
 }
 
