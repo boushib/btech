@@ -665,6 +665,10 @@ aside h2 span {
 
 @media (max-width: 480px) {
 
+    .col-2 {
+        width: 100%;
+    }
+
     header h1,
     header h1 span {
         font-size: 26px;
