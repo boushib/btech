@@ -52,6 +52,7 @@ section {
     font-size: 20px;
     color: #333;
     margin: 16px 0;
+    font-weight: 600;
 }
 
 .card-body p {
@@ -83,15 +84,21 @@ section {
 
 a {
     text-decoration: none;
+    font-weight: 600;
+    color: #009688;
 }
 
 h1 {
     font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 h2 {
     font-size: 28px;
     font-weight: 700;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
 }
 
@@ -111,8 +118,8 @@ header h1 {
 }
 
 header h1 span {
-    font-size: 36px;
-    font-weight: 400;
+    /* font-size: 36px; */
+    font-weight: 300;
 }
 
 header h1 span {
@@ -121,9 +128,15 @@ header h1 span {
 
 .hero p,
 .hero p span {
+    color: #333;
     text-align: center;
     font-size: 18px;
     margin-bottom: 36px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero p span {
+    font-weight: 700;
 }
 
 .hero .toggle-events {
@@ -135,7 +148,7 @@ header h1 span {
     text-align: center;
     position: fixed;
     left: 0;
-    z-index: 9999;
+    z-index: 99999;
     cursor: pointer;
 }
 
@@ -324,6 +337,7 @@ nav li {
 nav li a {
     color: #f5fbfc;
     transition: all .3s ease-in-out;
+    font-weight: 400;
 }
 
 nav li.active a,
@@ -395,6 +409,36 @@ nav li:focus a {
     height: 36px;
 }
 
+.upcoming-events .filter-key {
+    position: relative;
+    margin: 8px 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.upcoming-events .filter-key::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 3px;
+    width: 10px;
+    height: 10px;
+}
+
+.upcoming-events .filter-key.filter-key-meetup::before {
+    background-color: #52c4c4;
+}
+.upcoming-events .filter-key.filter-key-class::before {
+    background-color: #91c84d;
+}
+.upcoming-events .filter-key.filter-key-event::before {
+    background-color: #333;
+}
+
 /* start upcoming events */
 
 /* start footer */
@@ -411,12 +455,13 @@ footer .container {
 }
 
 footer h4 {
-    font-size: 14px;
+    font-size: 13px;
     text-transform: uppercase;
     color: #ccc;
     letter-spacing: 1px;
     position: relative;
     line-height: 36px;
+    font-weight: 600;
 }
 
 footer ul {
@@ -438,6 +483,10 @@ footer .copy {
     width: 100%;
 }
 
+footer .copy p {
+    font-size: 14px;
+}
+
 footer .fab {
     color: #ccc;
     margin: 0 8px;
@@ -447,16 +496,34 @@ footer .fab {
 
 footer li {
     line-height: 2;
+    font-size: 14px;
 }
 
-footer h3, footer h3 span {
+footer h3,
+footer h3 span {
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #ccc;
 }
+
 footer h3 {
     font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer h3 span {
+    font-weight: 300;
+}
+
+footer p {
+    /* font-family: 'Montserrat', sans-serif; */
+    color: #ccc;
+}
+
+footer p span {
+    font-weight: 700;
+    letter-spacing: .5px;
 }
 
 /* end footer */
@@ -468,8 +535,39 @@ aside {
     left: 0;
     width: 0;
     height: 100vh;
-    z-index: 999;
+    z-index: 9999;
     background: #fff;
-    border-right: 6px solid #91c84d;
+    overflow: hidden;
 }
+
+aside .aside-container {
+    padding: 20px;
+    border-right: 4px solid #91c84d;
+    height: 100vh;
+}
+
+aside h2 {
+    white-space: nowrap
+}
+
+aside h2 span {
+    font-size: 36px;
+    font-weight: 700;
+    color: #91c84d;
+    display: block;
+}
+
+.overlap {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(24, 24, 24, .7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0;
+    /* width: 0; */
+    display: none;
+}
+
 /* end aside */
